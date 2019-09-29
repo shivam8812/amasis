@@ -1,0 +1,109 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: 33.5%;
+}
+
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  width: 35%;
+  border-radius: 20px;
+  margin-left: 33.5%;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+.a {margin-left: 45%;
+       background-color: transparent;
+       height: 55px;
+       width: 170px;
+       -webkit-text-fill-color: white;
+       font-size: 20px;
+       font-family: sans-serif;
+       border-color: white;
+       border-radius: 100px;
+
+    }
+    .a:hover {
+        background-color:ghostwhite;
+        -webkit-text-fill-color: black;
+        cursor: pointer;
+     
+        
+    }
+
+
+</style>
+<title>
+  Search
+</title>
+</head><div class="b">
+<body background="bg_3.jpg" style="background-position: center; background-size: cover;"></div>
+
+<img src="generatedtext (1).png" style="margin-left: 12%;">
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names " title="Type in a name and try opening Shivam"
+    style="width:35%;border-radius:20px; margin-top: 50px;">
+
+ <ul id="myUL">
+  <li><a href="https://shivag4321.wixsite.com/shivam" target="blank">Shivam</a></li>
+  <li><a href="#" target="blank">Mahak</a></li>
+  <li><a href="#">Agnes</a></li>
+  <li><a href="#">Bob</a></li>
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul><br><br>
+<a href="filters.html" ><button div class="a" >ADD FILTERS</button></a>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
